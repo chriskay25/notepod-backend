@@ -31,6 +31,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'dotenv-rails'
   gem 'pry'
   gem 'pry-doc'
   gem 'pry-rails', '~> 0.3.9'
@@ -44,7 +45,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "active_model_serializers", "~> 0.10.12"
-
-gem 'dotenv-rails'
 
 gem "podcast_api", "~> 1.0"
