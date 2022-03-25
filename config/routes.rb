@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :users
       resources :notes
       get '/search', to: 'searches#index'
+      post '/login', to: 'auth#create'
     end
   end
 end
