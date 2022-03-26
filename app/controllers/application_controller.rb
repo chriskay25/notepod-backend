@@ -34,4 +34,11 @@ class ApplicationController < ActionController::API
     render json: {message: 'Please log in'}, status: :unauthorized unless logged_in?
   end
 
+  def current_user_serializer(user)
+    {
+      'username': user.username,
+      'notes': user.notes
+    }
+  end
+
 end

@@ -18,7 +18,7 @@ class Api::V1::AuthController < ApplicationController
 
   def get_current_user
     if logged_in?
-      render json: current_user, status: :ok
+      render json: current_user_serializer(current_user), status: :ok
     else
       render json: {error: "No user is logged in"}, status: :unauthorized
     end
