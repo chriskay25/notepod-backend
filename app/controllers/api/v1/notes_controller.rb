@@ -1,9 +1,14 @@
 class Api::V1::NotesController < ApplicationController
 
+  def index
+    notes = current_user.notes
+    render json: NoteSerializer.new(notes).serializable_hash.to_json, status: :ok
+  end
+
   def create
-    note = Note.new(note_params)
+    note = current_user.notes.build(note_params)
     if note.save
-      render json: {note: note}, status: :created
+      render json: NoteSerializer.new(note).serializable_hash.to_json, status: :created
     else
       render json: {errors: note.errors}, status: :unprocessable_entity
     end
