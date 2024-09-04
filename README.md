@@ -15,7 +15,7 @@ These instructions will get you a copy of the backend up and running on your loc
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/chriskay/notepod-backend.git
+git clone https://github.com/chriskay25/notepod-backend.git
 cd notepod-backend
 ```
 
